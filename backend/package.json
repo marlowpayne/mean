@@ -14,7 +14,9 @@
     "prettier": "^1.18.2"
   },
   "scripts": {
-    "start": "nodemon ./app.js localhost 4000"
+    "start": "nodemon ./app.js localhost 4000",
+    "lint": "prettier --check *.{js,json,md}",
+    "prettier": "prettier --write *.{js,json,md}"
   },
   "husky": {
     "hooks": {
