@@ -8,7 +8,7 @@
 
 <mat-sidenav-container>
   <!-- Sidenav -->
-  <mat-sidenav #sidenav [mode]="isBiggerScreen() ? 'over' : 'side'" [(opened)]="opened" [fixedInViewport]="true"
+  <mat-sidenav #sidenav [mode]="isBiggerScreen() ? 'over' : 'side'" [(opened)]="opened" [fixedInViewport]="false"
     [fixedTopGap]>
     <mat-nav-list>
       <a mat-list-item routerLinkActive="active" routerLink="/add-student">
