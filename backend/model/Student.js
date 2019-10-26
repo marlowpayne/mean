@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 const Student = new Schema(
   {
-    student_name: {
+    studentName: {
       type: String
     },
-    student_email: {
+    studentEmail: {
       type: String
     },
     section: {

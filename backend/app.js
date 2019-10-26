@@ -32,13 +32,13 @@ app.use(
 app.use(cors());
 app.use(
   express.static(
-    path.join(__dirname, "dist/angular8-meanstack-angular-material")
+    path.join(__dirname, "dist/mean")
   )
 );
 app.use(
   "/",
   express.static(
-    path.join(__dirname, "dist/angular8-meanstack-angular-material")
+    path.join(__dirname, "dist/mean")
   )
 );
 app.use("/api", studentRoute);
