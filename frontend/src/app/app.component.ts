@@ -13,10 +13,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     if (window.innerWidth < 768) {
-      this.sidenav.fixedTopGap = 55;
       this.opened = false;
     } else {
-      this.sidenav.fixedTopGap = 55;
       this.opened = true;
     }
   }
@@ -24,10 +22,8 @@ export class AppComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     if (event.target.innerWidth < 768) {
-      this.sidenav.fixedTopGap = 55;
       this.opened = false;
     } else {
-      this.sidenav.fixedTopGap = 55;
       this.opened = true;
     }
   }

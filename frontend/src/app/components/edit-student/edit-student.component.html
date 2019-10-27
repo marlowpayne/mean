@@ -14,7 +14,7 @@
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Student name" formControlName="studentName">
           <mat-error *ngIf="handleError('studentName', 'required')">
-            You must provide a<strong>student name</strong>
+            You must provide a <strong>student name</strong>
           </mat-error>
         </mat-form-field>
 
@@ -22,7 +22,7 @@
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Student email" formControlName="studentEmail">
           <mat-error *ngIf="handleError('studentEmail', 'required')">
-            You must provide a<strong>student email</strong>
+            You must provide a <strong>student email</strong>
           </mat-error>
         </mat-form-field>
 
@@ -46,16 +46,16 @@
         <!-- Add subjects -->
         <mat-form-field class="multiple-items">
           <mat-chip-list #chipList>
-            <mat-chip *ngFor="let subjectArray of subjectArray" [selectable]="selectable" [removable]="removable"
-              (removed)="remove(subjectArray)">
-              {{subjectArray.name}}
+            <mat-chip *ngFor="let subject of subjectArray" [selectable]="selectable" [removable]="removable"
+              (removed)="remove(subject)">
+              {{subject.name}}
               <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
             </mat-chip>
             <input placeholder="Add subject" [matChipInputFor]="chipList"
-              [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+              [matChipInputSeparatorKeyCodes]="separatorKeyCodes" [matChipInputAddOnBlur]="addOnBlur"
               (matChipInputTokenEnd)="add($event)">
           </mat-chip-list>
-          <i class="material-icons tooltip-info" matTooltip="Enter subject name and press tab to add subjects">
+          <i class="material-icons tooltip-info" matTooltip="Enter subject name and press enter to add subjects (up to 5)">
             info
           </i>
         </mat-form-field>
